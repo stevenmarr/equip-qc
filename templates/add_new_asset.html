@@ -1,31 +1,21 @@
 <!DOCTYPE html>
 
 <html>
-    
+
 <head>
     <title align = "center">New Equipment Entry</title>
-        
-<style type = "text/css">
-        body
-        {
-            font-family: sans-serif; font-size: 14px; width: 800px; margin: 0 auto; padding: 10px; bgcolor = "silver"
-        }
-        .error{
-        color: red; font-size: 20px
-        }
-        input[type=submit]{
-        font-size: 24px;
-        }
-</style>
-        
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+
 </head>
 
-<body bgcolor = "white">
-    
+<body>
+
         <h1>
            Asset Entry
         </h1>
-    
+
 <form method="post">
     <br>
     <label>Manufacturer</label>
@@ -36,21 +26,21 @@
         <option>{{manufacturer}}</option>
         {% endfor %}
     </select>
-    
+
     <input type="submit" value="Lookup" />
 </form>
-<form method="post">   
-            
-                    
+<form method="post">
+
+
         <br>
-    <label>Model</label>    
+    <label>Model</label>
     <select name = "model" >
-        
+
         {% for models in model_list %}
         <option>{{models}}</option>
         {% endfor %}
     </select>
-    
+
     <br>
     <br>
     <label>Barcode Number</label>
@@ -58,15 +48,15 @@
     <input type = "text"  name = "barcode" value = {{barcode}}>
             <br>
     <label class = "error">{{error_barcode}}</label>
-            
+
     <label>Asset Comments</label>
             <br>
             <br>
     <textarea name = "asset_comments" cols = "60" rows = "20" >{{asset_comments}}</textarea>
             <br>
-        
+
     <input type = "submit">
-    
+
 </form>
 
 </html>

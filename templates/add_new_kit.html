@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 
 <html>
-    
+
 <head>
     <title align = "center">New Equipment Entry</title>
-        
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">    
 <style type = "text/css">
         body
         {
@@ -17,24 +18,24 @@
         font-size: 24px;
         }
 </style>
-        
+
 </head>
 
 <body bgcolor = "white">
-    
+
         <h1>
            New Unit Entry
         </h1>
-    
+
 <form method="post">
-    
+
     <label>Barcode Number</label>
             <br>
     <input type = "text" size="80" name = "barcode" value = {{barcode}}>
             <br>
      <label class = "error">{{error_barcode}}</label>
             <br>
-    
+
     <label>Manual URL</label>
             <br>
             <br>
@@ -42,7 +43,7 @@
             <br>
     <label class = "error">{{error_manual_url}}</label>
             <br>
-    
+
     <label>Equipment Manufacturer</label>
             <br>
             <br>
@@ -50,7 +51,7 @@
             <br>
      <label class = "error">{{error_manufacturer}}</label>
             <br>
-    
+
     <label>Equipment Model</label>
             <br>
             <br>
@@ -58,7 +59,7 @@
             <br>
     <label class = "error">{{error_model}}</label>
             <br>
-    
+
     <label>Kit Contents</label>
             <br>
             <br>
@@ -66,7 +67,7 @@
             <br>
     <label class = "error">{{error_contents}}</label>
             <br>
-    
+
     <label>QC Process</label>
             <br>
             <br>
@@ -74,9 +75,9 @@
             <br>
         <label class = "error">{{error_process}}</label>
             <br>
-    
+
     <input type = "submit">
-    
+
 </form>
 
 </html>
